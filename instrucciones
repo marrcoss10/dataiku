@@ -1,0 +1,16 @@
+Situación: (Hay un usuario ya iniciado en Dataiku que no es el nuestro)
+	
+	1. $Nombre_Carpeta_Dataiku/bin/dss stop  #Para liberar el puerto 11000 que es al que nos vamos a conectar#
+		(Nombre_Carpeta_Dataiku si no se a modificado lo mas seguro es que se DATA_FOLDER)
+		
+	2. $dataiku-dss-10.0.2/installer.sh -d Nombre_nueva_carpeta -p 11000 #Asi creamos una carpeta a la que asociar nuestro email#
+	3. $Nombre_nueva_carpeta/bin/dss start
+	4. En el navegador : localhost:11000
+	4. Entras a Dataiku y te preguntará si tienes licencia, le das a que no.
+	5. Introduces los datos que te pida, el email puede ser el que metiste en tu ordenador.
+  
+Para volver a la cuenta anterior : 
+  1. $Nombre_nueva_Carpeta/bin/dss stop
+  2. $Nombre_Carpeta_Dataiku/bin/dss start
+  3. En firefox : localhost:11000
+  
